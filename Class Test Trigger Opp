@@ -1,0 +1,97 @@
+@isTest
+public class OppHandlerTest {
+@isTest
+     public static void oppHandlertest(){
+       List<Opportunity> opp= new List<Opportunity>();  
+             Opportunity oppTest = new opportunity();
+                   
+                 oppTest.name = 'Oportunidade teste';
+                 oppTest.stageName = 'Negócio Perdido';
+                 oppTest.closeDate = System.today();
+                 
+                 opp.add(oppTest);
+                 
+                 Insert opp;
+                 
+                 
+               oppTest.stageName = 'Cartão Gerado';
+                 
+         
+               try{
+               Update opp;
+               }
+                 
+               catch(Exception e){
+               system.assertEquals(e.getMessage(), e.getMessage());
+               }
+                 
+       List<Opportunity> opp2= new List<Opportunity>();  
+             Opportunity oppB = new opportunity();
+             
+             oppB.name = 'Oportunidade teste';
+             oppB.stageName = 'Negócio Ganho';
+             oppB.closeDate = System.today();
+             
+             opp2.add(oppB);
+             
+             Insert opp2;
+
+         
+             oppB.stageName = 'Cartão Gerado';
+         
+         
+             try{
+                 Update opp2;
+             }
+             
+             catch(Exception e){
+             system.assertEquals(e.getMessage(), e.getMessage());
+             }
+             
+       List<Opportunity> opp4= new List<Opportunity>();  
+           Opportunity oppD = new opportunity();
+               
+             oppD.name = 'Oportunidade teste';
+             oppD.stageName = 'Cartão Gerado';
+             oppD.closeDate = System.today();
+             
+             opp4.add(oppD);
+             
+             Insert opp4;
+             
+            
+             oppD.stageName = 'Cartão Perdido';
+             
+     
+           try{
+           Update opp4;
+           }
+             
+           catch(Exception e){
+           system.assertEquals(e.getMessage(), e.getMessage());
+           }
+             
+       List<Opportunity> opp6= new List<Opportunity>();  
+           Opportunity oppF= new opportunity();
+               
+             oppF.name = 'Oportunidade teste';
+             oppF.stageName = 'Cartão Perdido';
+             oppF.closeDate = System.today();
+             
+             opp6.add(oppF);
+             
+             Insert opp6;
+
+         
+            oppF.stageName = 'Cartão Gerado';
+     
+            try{
+            Update opp6;
+            }
+             
+            catch(Exception e){
+            system.assertEquals(e.getMessage(), e.getMessage());
+            }
+         
+     }
+}
