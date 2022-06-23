@@ -1,0 +1,8 @@
+trigger Opp on Opportunity (before update) {
+	 String event = String.valueOf(trigger.operationType);
+        
+	if(event == 'BEFORE_UPDATE'){
+		
+        OppHandler.oppHandlertest(Trigger.new, Trigger.oldMap);
+            }
+		}
