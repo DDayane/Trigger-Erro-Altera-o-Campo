@@ -1,0 +1,22 @@
+public class OppHandler {
+  public static void oppHandlertest (List<Opportunity> oppNew, Map<Id, opportunity> oppOld){
+        for(Opportunity opp: oppNew){
+            
+            if(oppOld.get(opp.id).StageName == 'Negócio Perdido' && opp.StageName != 'Negócio Perdido' ){
+			opp.addError('Não é possivel alterar a classificação pois ela é perdida');
+			}
+            if(oppOld.get(opp.id).StageName == 'Negócio Ganho' && opp.StageName != 'Negócio Ganho'){
+                opp.addError('Não é possivel alterar a classificação pois ela é ganha');
+            }
+             if(oppOld.get(opp.id).StageName == 'Cartão Gerado' && opp.StageName != 'Cartão Gerado'){
+                opp.addError('Não é possivel alterar a classificação pois ela é ganha');
+            }
+             if(oppOld.get(opp.id).StageName == 'Cartão Perdido' && opp.StageName != 'Cartão Perdido'){
+                opp.addError('Não é possivel alterar a classificação pois ela é perdida');
+            }
+            
+            
+            
+        }
+  }
+}
